@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Chatbot } from 'supersimpledev';
 import './ChatInput.css';
+import loadingSpinner from '../assets/loading-spinner.gif';
 
 export function ChatInput({ chatMessages, setChatMessages}) {
 const [inputText, setInputText] = useState('');
@@ -35,7 +36,7 @@ async function sendMessage() {
     ...newChatMessages,
     {
         id: crypto.randomUUID(),
-        message: 'Loading...',
+        message: <img src={loadingSpinner} className="loading-gif"/>,
         sender: 'bot'
     }
     ])
@@ -63,18 +64,18 @@ function keyDownHandler(event) {
 
 return (
     <div className="chat-input-container">
-    <input 
-        placeholder="Send a message to Chatbot" 
-        size="30"
-        onChange={saveInputText}
-        onKeyDown={keyDownHandler}
-        value={inputText}
-        className="chat-input"
-    />
-    <button
-        onClick={sendMessage}
-        className="send-button"
-    >Send</button>
+        <input 
+            placeholder="Send a message to Chatbot" 
+            size="30"
+            onChange={saveInputText}
+            onKeyDown={keyDownHandler}
+            value={inputText}
+            className="chat-input"
+        />
+        <button
+            onClick={sendMessage}
+            className="send-button"
+        >Send</button>
     </div>
 );
 };

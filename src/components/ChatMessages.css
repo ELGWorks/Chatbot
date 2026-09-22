@@ -4,3 +4,23 @@
   flex-grow: 1;
   scrollbar-width: none;
 }
+
+.welcome-text{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-grow: 1;
+  color: gray;
+}
+
+@media (max-width: 640px) {
+  .welcome-text{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-grow: 1;
+    color: gray;
+    padding: 10px;
+    text-align: justify;
+  }
+}

@@ -3,17 +3,25 @@ import { ChatMessage } from './ChatMessage';
 import './ChatMessages.css';
 
 function ChatMessages({ chatMessages }) {
-    const chatMesssagesRef = useRef(null);
+    const chatMessagesRef = useRef(null);
 
     useEffect(() => {
-        const containerElem = chatMesssagesRef.current;
+        const containerElem = chatMessagesRef.current;
         if (containerElem) {
         containerElem.scrollTop = containerElem.scrollHeight;
         }
     }, [chatMessages]);
 
+    if (chatMessages.length === 0) {
+        return (
+            <div className="welcome-text">
+                Welcome to the chatbot project! Send a message using the textbox below.
+            </div>
+        )
+    }
+
     return (
-        <div className="chat-messages-container" ref={chatMesssagesRef}>
+        <div className="chat-messages-container" ref={chatMessagesRef}>
         {chatMessages.map((chatMessage) => {
             return (
             <ChatMessage 
