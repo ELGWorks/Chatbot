@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .loading-gif{
@@ -32,7 +32,7 @@
 
 @media (max-width: 640px) {
   .chat-input-container {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   .chat-input {
