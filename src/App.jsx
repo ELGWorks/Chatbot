@@ -1,23 +1,33 @@
-import { useState } from 'react';
-import { ChatInput } from './components/ChatInput';
-import ChatMessages from './components/ChatMessages'
+import { useState, useEffect } from "react";
+import { ChatInput } from "./components/ChatInput";
+import { Chatbot } from "supersimpledev";
+import ChatMessages from "./components/ChatMessages";
+import "./App.css";
 
-import './App.css';
+function App() {
+  const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages')) || []);
 
-  function App() {
-    const [chatMessages, setChatMessages] = useState([]);
+  //5h custom responses
+  useEffect(() => {
+    Chatbot.addResponses({
+      Hi: "Hey there! How can I help you today?",
+      hi: "Howdy! Is there anything I can help you with, today?",
+    });
+  }, []);
 
-    return (
-      <div className="app-container">
-        <ChatMessages 
-          chatMessages={chatMessages}
-        />
-        <ChatInput 
-          chatMessages={chatMessages}
-          setChatMessages={setChatMessages}
-        />
-      </div>
-    );
-  };
+  useEffect(() => {
+    localStorage.setItem("messages", JSON.stringify(chatMessages));
+  }, [chatMessages]);
 
-export default App
+  return (
+    <div className="app-container">
+      <ChatMessages chatMessages={chatMessages} />
+      <ChatInput
+        chatMessages={chatMessages}
+        setChatMessages={setChatMessages}
+      />
+    </div>
+  );
+}
+
+export default App;

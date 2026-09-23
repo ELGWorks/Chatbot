@@ -30,9 +30,20 @@
   margin: -15px;
 }
 
+.clear-button{
+  background-color: rgb(235, 235, 235);
+  color: black;
+  font-size: 15px;
+  padding: 14px 21px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 @media (max-width: 640px) {
   .chat-input-container {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 
   .chat-input {

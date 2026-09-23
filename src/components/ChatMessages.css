@@ -13,6 +13,12 @@
   color: gray;
 }
 
+.message-time {
+  margin-top: 10px;
+  color:gray;
+  font-size: 12px;
+}
+
 @media (max-width: 640px) {
   .welcome-text{
     display: flex;
