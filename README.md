@@ -40,18 +40,4 @@
 * **React.js 19.3.0** — UI library
 * **Day.js 1.11.23** — Date and time utility
 * **SuperSimpleDev 8.6.4** — Project utility/library
-
-### Development
-
 * **ESLint 9.39.5** — Code linting
-
----
-
-## 📂 Project Structure
-
-```text
-Chatbot/
-│
-└── src/
-    └── Chatbot application source code
-```
