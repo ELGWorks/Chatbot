@@ -1,12 +1,82 @@
-# React + Vite
+# 📷 Ecommerce Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="https://github.com/ELGWorks/Ecommerce-Project">
+    <img src="frontend-demo/src/assets/demo/gif/demo.gif" alt="Preview" width="800"/>
+  </a>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <b>An ecommerce website built using React.js + TypeScript and Express</b>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📱 Responsive Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<p align="center">
+  <img src="frontend-demo/src/assets/demo/images/mobile-view.png" width="200"/>
+</p>
+
+<p align="center"><b>Works on mobile phones!</b></p>
+
+---
+
+## 🚀 Live Demo
+
+<p>
+  <a href="https://ecommerce-project-wheat-nine.vercel.app/" target="_blank">
+    Visit Live Site
+  </a>
+</p>
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* **Vite 6.4.3** — Frontend build tool
+* **React.js 19.3.0** — UI library
+* **TypeScript 5.8.3** — Type-safe JavaScript
+* **React Router 7.18.4** — Client-side routing
+* **Axios 1.20.0** — HTTP requests in the full-stack application
+
+### Backend
+
+* **Node.js** — JavaScript runtime
+* **Express 4.21.2** — Backend web framework
+* **Sequelize 6.37.5** — Database ORM
+* **MySQL2 3.14.1** — MySQL database driver
+* **PostgreSQL (pg) 8.16.0** — PostgreSQL database driver
+
+---
+
+## 📂 Project Structure
+
+Ecommerce-Project/
+│
+├── frontend-demo/
+│   └── Demo frontend used for the hosted preview
+
+
+└── Fullstack/
+    └── Complete application source code
+
+### Frontend Demo
+
+The `frontend-demo` folder contains a **frontend-only version** of the project used specifically for the live Vercel demonstration.
+
+It does not contain the complete backend/full-stack implementation.
+
+### Fullstack
+
+The `Fullstack` folder contains the **actual full-stack application code** intended for real deployment.
+
+It includes the frontend and backend implementation and uses **Axios** for communicating with the backend/API.
+
+---
+
+## 📌 Note
+
+The backend implementation was entirely AI-generated.
